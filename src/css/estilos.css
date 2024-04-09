@@ -1,0 +1,253 @@
+html {
+    color: #fff;
+    scroll-behavior: smooth;
+    /* scrolagem mais suave*/
+}
+
+body {
+
+    font-family: "poppins", sans-serif;
+    margin: 0 auto;
+    max-width: 1120px;
+    background: linear-gradient(150deg, #2F4F4F, #DCDCDC);
+    background-size: 120% 120%;
+}
+
+.cabecalho {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* abaixo colocaremos a classe .logo dentro da classe .cabecalo seguindo o padrão que está no html */
+.cabecalho .logo {
+
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    text-decoration: underline;
+    text-align: center;
+    line-height: 50px;
+    font-family: "Raleway", sans-serif;
+    transition: 0.2s;
+    /* tempo quando passamos o mouse em cima com hover*/
+}
+
+.cabecalho a:hover .logo {
+    color: #DCDCDC;
+    border: 2px solid #DCDCDC;
+}
+
+
+.cabecalho .menu li a {
+    font-size: 20px;
+    text-transform: capitalize;
+    /* para deixa as primerias letras de casa palavra maiuscula */
+    padding: 10px 20px;
+    transition: 0.2s;
+}
+
+.cabecalho .menu li a:hover {
+    background-color: #DCDCDC;
+    color: #fff;
+    border-radius: 50px;
+    /* dexia a bordar mais arredondada*/
+
+}
+
+.home {
+
+    display: flex;
+    /* colocar os elementos do bloco um do lado do outro */
+    min-height: calc(100h - 125px);
+    /* altura do bloco */
+    align-items: center;
+    /* centralizar dentro do bloco */
+    gap: 50px;
+    /* definir o espaçamento entre as linhas dos textos */
+    justify-content: space-between;
+
+}
+
+.home .informacoes {
+
+    display: flex;
+    flex-direction: column;
+    /* deixar os itens um de baixa do outro */
+    gap: 15px;
+    letter-spacing: 2px;
+    /* espaço entre as letras */
+    padding: 0 15px;
+    max-width: 50%;
+
+}
+
+.home .informacoes h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+    /* margem parte de baixo*/
+
+}
+
+.home .informacoes p {
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.home .redes-sociais {
+
+    display: flex;
+
+}
+
+.home .redes-sociais a i {
+    border: 1x solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+.home .redes-sociais a i:hover {
+    color: #DCDCDC;
+    border: 1px solid #DCDCDC;
+    transform: scale(1.3);
+    /* aumentar o elemento*/
+}
+
+.home .container-foto .foto {
+
+    width: 450px;
+    border-radius: 50%;
+
+}
+
+.home .container-foto img {
+    width: 100%;
+    border-radius: 50%;
+    background: linear-gradient(to left, #FF7F50, #18c063, #00eea2);
+    background-size: 200% 180%;
+  animation: gradient-animation 5s ease infinite;
+}
+
+
+.projetos {
+
+    padding: 70px 0;
+    /*70px em cima e baixo, e 0 dos lados */
+
+}
+
+.projetos .titulo {
+    background-color: #BDB76B;
+    text-align: center;
+    padding: 60ox 0;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+    /*deixar todas as letras maiusculas*/
+
+}
+
+.projetos .container-projetos {
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* ajuda na responsividade do site*/
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.projetos .projeto {
+    max-width: 260px;
+    max-height: 500px;
+    position: relative;
+    display: none;
+}
+
+.projetos .projeto.ativo {
+    display: block;
+}
+
+.projetos .projeto img {
+    height: 100%;
+}
+
+.projetos .projeto h3 {
+    background-color: #BDB76B;
+    width: 100%;
+    padding: 10px 0 10px 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.projetos .projeto .informacoes-projeto {
+    background-color: rgb(169, 53, 90);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    opacity: 0;
+    /* opacidade, esconde o conteudo*/
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.projetos .container-projetos .projeto:hover .informacoes-projeto {
+    opacity: 0.7;
+    background-color: #000;
+
+}
+
+.projetos .btn-mostrar-projetos {
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: white;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* mudar cursor do mouse*/
+
+
+}
+
+.projetos .btn-mostrar-projetos:hover {
+    background-color: #DCDCDC;
+    transition: 0.3s;
+}
+
+.projetos .btn-mostrar-projetos.remover {
+    display: none;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
